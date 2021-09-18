@@ -1,32 +1,76 @@
 var initialPrice=document.querySelector("#initial-price");
-var stockQuantity=document.querySelector("#quantity");
+var quantity=document.querySelector("#quantity");
 var currentPrice=document.querySelector("#current-price");
+var errorMsg=document.querySelector("#error-msg");
 var resultBtn=document.querySelector("#btn");
 var output=document.querySelector("#output");
 
-function calculateProfitLoss(){
+resultBtn.addEventListener("click", validateValue);
 
-    var purchasedPrice = initialPrice.value * stockQuantity.value; 
-      var sellingPrice =currentPrice.value * stockQuantity.value;
-
-    if(purchasedPrice > sellingPrice){
-       
-        showResult("its loss");
-    }
-    else if(purchasedPrice==sellingPrice){
-        showResult("there is no loss or profit");
+function validateValue(){
+    hideMessage();
+    if(initialPrice.value && quantity.value && currentPrice.value){
+        if(initialPrice.value>0){
+            if(quantity.value>0){
+                if(currentPrice.value>0){
+                    calculateProfitLoss();  
+                }
+                else{
+                    showMessage("Current stock price cannot be zero or negative  ");
+                }    
+            }
+        }
+        else{
+            showMessage("Stock price or Quantity cannot be zero or negative")
+        }
     }
     else{
-        showResult("you earned profit");
+        showMessage("Please enter all the values to calculate profit/loss");  
+    }      
+}
+        
+
+function calculateProfitLoss(){   
+    var costPrice = initialPrice.value * quantity.value; 
+    var sellingPrice =currentPrice.value * quantity.value;
+
+    if(costPrice > sellingPrice){
+        var lossAmnt =costPrice - sellingPrice;
+        var lossPercent =((lossAmnt/costPrice)*100).toFixed(2);
+        showResult("Hey loss is", lossAmnt, lossPercent);
     }
+    else if(costPrice==sellingPrice){
+        output.innerText="there is no loss or profit";
+        
+    }
+    else{
+        var profitAmnt=sellingPrice-costPrice;
+        var profitPercent =((profitAmnt/costPrice)*100).toFixed(2);
+        showResult("Hey profit is ", profitAmnt, profitPercent);
+
+    }
+        
+}    
+
+function showResult(result,amount,percentage){
+    output.style.display="block";
+    output.innerText=result+" of "+amount + " and the percent is "+percentage+"%";
+}
+function showMessage(msg){
+    errorMsg.innerText=msg
+    errorMsg.style.display="block";
 
 }
 
-function showResult(result){
-    output.innerText=result;
+function hideMessage(){
+    errorMsg.style.display="none";
+    output.style.display="none";
+
 }
 
-resultBtn.addEventListener("click", calculateProfitLoss);
+
+
+
 
 
 
