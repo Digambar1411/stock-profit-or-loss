@@ -1,0 +1,104 @@
+body{
+    text-align: center;
+}
+header{
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size:45px;
+    font-weight: 600;
+    padding: 1rem auto;
+   color:#758283;
+
+}
+label{
+    text-align: center;
+    font-size:x-large;
+    margin: 1rem auto;
+    max-width:min-content;
+    border: #6d7072;
+}
+input {
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid #6d7072;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    font-size: x-large;
+    margin-bottom: 2rem;
+    width: 270px;
+}
+button{
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    font-size: x-large;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    border: 1.5px solid black;
+    font-family: 'Bitter', serif;
+    background-color: #6d7072;
+   
+}
+
+#error-msg{
+    text-align: center;
+    font-size:x-large;
+    font-weight: bold;
+    margin: 1rem auto;
+    padding-top: 1rem;
+    font-family: 'Bitter', serif;
+    /* color:darkgray */
+}
+
+#output{
+    text-align: center;
+    font-size:x-large;
+    font-weight: bold;
+    margin: 1rem auto;
+    padding-top: 1rem;
+    font-family: 'Bitter', serif;
+    color:black
+}
+
+
+footer{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: large;
+    font-family: 'Bitter', serif;
+   
+}
+::placeholder{
+    font-style: 'Bitter', serif;
+    font-style: italic;
+    font-size: large;
+}
+
+footer li{
+    list-style: none;
+    margin: 0 auto;
+    padding: auto;
+}
+footer div{
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+    padding-left: auto;
+    padding-right: auto;
+    font-size: larger;
+}
+li{
+    display: inline;
+    padding: 0.5rem;
+    padding-inline-start: 0rem;
+}
+
+img{
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: 1;
+
+}
+img:hover{
+    opacity: 0.9;
+}
