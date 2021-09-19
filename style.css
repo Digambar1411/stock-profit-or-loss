@@ -8,7 +8,7 @@ header{
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    font-size:45px;
+    font-size:40px;
     font-weight: 600;
     padding: 1rem auto;
    color:#758283;
@@ -26,14 +26,14 @@ input {
     margin: 1rem auto;
     border: 2px solid #6d7072;
     border-radius: 0.4rem;
-    padding: 0.5rem;
-    font-size: x-large;
-    margin-bottom: 2rem;
+    padding: 0.4rem;
+    font-size: large;
+    margin-bottom: 1.5rem;
     width: 270px;
 }
 button{
     margin: 0 auto;
-    padding: 0.7rem 1.5rem;
+    padding: 0.5rem 0.7rem;
     font-size: x-large;
     border-radius: 0.4rem;
     font-weight: bold;
