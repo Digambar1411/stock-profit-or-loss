@@ -4,6 +4,9 @@ body{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
+:root{
+    --primary-color:#03203C; 
+}
 header{
     margin: auto;
     margin-top: 4rem;
@@ -12,6 +15,7 @@ header{
     font-weight: 600;
     padding: 1rem auto;
    color:#758283;
+   color: var(--primary-color);
 
 }
 label{
@@ -19,12 +23,12 @@ label{
     font-size:x-large;
     margin: 1rem auto;
     max-width:min-content;
-    border: #6d7072;
+    border: var(--primary-color);
 }
 input {
     display: block;
     margin: 1rem auto;
-    border: 2px solid #6d7072;
+    border: 2px solid var(--primary-color);
     border-radius: 0.4rem;
     padding: 0.4rem;
     font-size: large;
@@ -39,7 +43,8 @@ button{
     font-weight: bold;
     border: 1.5px solid black;
     font-family: 'Open Sans', sans-serif;
-    background-color: #6d7072;
+    background-color: var(--primary-color);
+    color: whitesmoke;
    
 }
 
