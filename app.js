@@ -10,23 +10,17 @@ resultBtn.addEventListener("click", validateValue);
 function validateValue(){
     hideMessage();
     if(initialPrice.value && quantity.value && currentPrice.value){
-        if(initialPrice.value>0){
-            if(quantity.value>0){
-                if(currentPrice.value>0){
-                    calculateProfitLoss();  
-                }
-                else{
-                    showMessage("Current stock price cannot be zero or negative  ");
-                }    
-            }
+        if(initialPrice.value>0 && quantity.value>0 && currentPrice.value>0){
+            calculateProfitLoss();  
+           
         }
         else{
-            showMessage("Stock price or Quantity cannot be zero or negative")
+            showMessage("All the values must be greater than zero");
         }
     }
     else{
-        alert("Please fill out all the fields");
-    }      
+        showMessage("Fill out all the values");
+    }         
 }
         
 function calculateProfitLoss(){   
@@ -40,7 +34,9 @@ function calculateProfitLoss(){
         document.body.style.backgroundColor="#FFA8B5";
     }
     else if(costPrice==sellingPrice){
-        output.innerText="there is no loss or profit";
+        output.style.display="block";
+        output.innerText="No gain No Pain";
+        document.body.style.backgroundColor="#898385";
         
     }
     else{
